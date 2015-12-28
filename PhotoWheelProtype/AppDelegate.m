@@ -22,6 +22,7 @@
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
     navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
     splitViewController.delegate = self;
+    
     return YES;
 }
 
@@ -57,5 +58,30 @@
         return NO;
     }
 }
+
+//-(void) splitViewController:(UISplitViewController *)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)pc {
+//    
+//    // get navigation controller of detail view
+//    UINavigationController *detailController = (UINavigationController *)[svc.viewControllers lastObject];
+//    DetailViewController *detailVc = (DetailViewController *)[detailController topViewController];
+//    
+//    // add right bar button
+//    detailVc.navigationItem.rightBarButtonItem = barButtonItem;
+//    
+//    // add popover
+//    [pc presentPopoverFromBarButtonItem:barButtonItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:true];
+//    
+//}
+//
+//-(void) splitViewController:(UISplitViewController *)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem {
+//    // get navigation controller of detail view
+//    UINavigationController *detailController = (UINavigationController *)[svc.viewControllers lastObject];
+//    DetailViewController *detailVc = (DetailViewController *)[detailController topViewController];
+//    
+//    // remove right bar button
+//    detailVc.navigationItem.rightBarButtonItems = @[];
+//
+//}
+
 
 @end

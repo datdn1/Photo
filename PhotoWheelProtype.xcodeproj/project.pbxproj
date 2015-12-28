@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28BFD57C1C2E7B6900F3293C /* WheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BFD57B1C2E7B6900F3293C /* WheelView.m */; };
 		28C35C051C2DA36900AF8C6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C35C041C2DA36900AF8C6D /* main.m */; };
 		28C35C081C2DA36900AF8C6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C35C071C2DA36900AF8C6D /* AppDelegate.m */; };
 		28C35C0B1C2DA36900AF8C6D /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C35C0A1C2DA36900AF8C6D /* MasterViewController.m */; };
@@ -14,9 +15,16 @@
 		28C35C111C2DA36900AF8C6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C35C0F1C2DA36900AF8C6D /* Main.storyboard */; };
 		28C35C131C2DA36900AF8C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C35C121C2DA36900AF8C6D /* Assets.xcassets */; };
 		28C35C161C2DA36900AF8C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C35C141C2DA36900AF8C6D /* LaunchScreen.storyboard */; };
+		28C35C201C2DC90800AF8C6D /* NameEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C35C1E1C2DC90800AF8C6D /* NameEditorViewController.m */; };
+		28C35C211C2DC90800AF8C6D /* NameEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28C35C1F1C2DC90800AF8C6D /* NameEditorViewController.xib */; };
+		28C8953F1C2F89AB0040FE22 /* PhotoWheelViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C8953E1C2F89AB0040FE22 /* PhotoWheelViewCell.m */; };
+		28C895421C2FBEC10040FE22 /* SpinGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C895411C2FBEC10040FE22 /* SpinGestureRecognizer.m */; };
+		28D760E31C30EEAA0057D002 /* GlobalPhotoKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D760E21C30EEAA0057D002 /* GlobalPhotoKeys.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28BFD57A1C2E7B6900F3293C /* WheelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WheelView.h; sourceTree = "<group>"; };
+		28BFD57B1C2E7B6900F3293C /* WheelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WheelView.m; sourceTree = "<group>"; };
 		28C35C001C2DA36900AF8C6D /* PhotoWheelProtype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoWheelProtype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C35C041C2DA36900AF8C6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		28C35C061C2DA36900AF8C6D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,6 +37,15 @@
 		28C35C121C2DA36900AF8C6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28C35C151C2DA36900AF8C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28C35C171C2DA36900AF8C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28C35C1D1C2DC90800AF8C6D /* NameEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameEditorViewController.h; sourceTree = "<group>"; };
+		28C35C1E1C2DC90800AF8C6D /* NameEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameEditorViewController.m; sourceTree = "<group>"; };
+		28C35C1F1C2DC90800AF8C6D /* NameEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NameEditorViewController.xib; sourceTree = "<group>"; };
+		28C8953D1C2F89AB0040FE22 /* PhotoWheelViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoWheelViewCell.h; sourceTree = "<group>"; };
+		28C8953E1C2F89AB0040FE22 /* PhotoWheelViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoWheelViewCell.m; sourceTree = "<group>"; };
+		28C895401C2FBEC10040FE22 /* SpinGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpinGestureRecognizer.h; sourceTree = "<group>"; };
+		28C895411C2FBEC10040FE22 /* SpinGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpinGestureRecognizer.m; sourceTree = "<group>"; };
+		28D760E11C30EEAA0057D002 /* GlobalPhotoKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalPhotoKeys.h; sourceTree = "<group>"; };
+		28D760E21C30EEAA0057D002 /* GlobalPhotoKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalPhotoKeys.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +84,17 @@
 				28C35C0A1C2DA36900AF8C6D /* MasterViewController.m */,
 				28C35C0C1C2DA36900AF8C6D /* DetailViewController.h */,
 				28C35C0D1C2DA36900AF8C6D /* DetailViewController.m */,
+				28C35C1D1C2DC90800AF8C6D /* NameEditorViewController.h */,
+				28C35C1E1C2DC90800AF8C6D /* NameEditorViewController.m */,
+				28BFD57A1C2E7B6900F3293C /* WheelView.h */,
+				28BFD57B1C2E7B6900F3293C /* WheelView.m */,
+				28C895401C2FBEC10040FE22 /* SpinGestureRecognizer.h */,
+				28C895411C2FBEC10040FE22 /* SpinGestureRecognizer.m */,
+				28C8953D1C2F89AB0040FE22 /* PhotoWheelViewCell.h */,
+				28C8953E1C2F89AB0040FE22 /* PhotoWheelViewCell.m */,
+				28D760E11C30EEAA0057D002 /* GlobalPhotoKeys.h */,
+				28D760E21C30EEAA0057D002 /* GlobalPhotoKeys.m */,
+				28C35C1F1C2DC90800AF8C6D /* NameEditorViewController.xib */,
 				28C35C0F1C2DA36900AF8C6D /* Main.storyboard */,
 				28C35C121C2DA36900AF8C6D /* Assets.xcassets */,
 				28C35C141C2DA36900AF8C6D /* LaunchScreen.storyboard */,
@@ -141,6 +169,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28C35C211C2DC90800AF8C6D /* NameEditorViewController.xib in Resources */,
 				28C35C161C2DA36900AF8C6D /* LaunchScreen.storyboard in Resources */,
 				28C35C131C2DA36900AF8C6D /* Assets.xcassets in Resources */,
 				28C35C111C2DA36900AF8C6D /* Main.storyboard in Resources */,
@@ -154,10 +183,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28BFD57C1C2E7B6900F3293C /* WheelView.m in Sources */,
 				28C35C081C2DA36900AF8C6D /* AppDelegate.m in Sources */,
 				28C35C0B1C2DA36900AF8C6D /* MasterViewController.m in Sources */,
+				28D760E31C30EEAA0057D002 /* GlobalPhotoKeys.m in Sources */,
+				28C895421C2FBEC10040FE22 /* SpinGestureRecognizer.m in Sources */,
 				28C35C051C2DA36900AF8C6D /* main.m in Sources */,
+				28C35C201C2DC90800AF8C6D /* NameEditorViewController.m in Sources */,
 				28C35C0E1C2DA36900AF8C6D /* DetailViewController.m in Sources */,
+				28C8953F1C2F89AB0040FE22 /* PhotoWheelViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +340,7 @@
 				28C35C1C1C2DA36900AF8C6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
