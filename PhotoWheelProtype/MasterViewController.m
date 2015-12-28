@@ -9,13 +9,57 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import "NameEditorViewController.h"
+#import  "GlobalPhotoKeys.h"
 
 @interface MasterViewController () <NameEditorViewControllerDelegate>
 
 @property NSMutableArray *objects;
+@property (nonatomic, assign) NSInteger currentSelectedAlbum;
 @end
 
 @implementation MasterViewController
+
+-(NSURL *) photoAlbumPath {
+    NSURL *documentPath = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    NSURL *photoAlbumPath = [documentPath URLByAppendingPathComponent:kPhotoAlbumFilename];
+    return photoAlbumPath;
+}
+
+-(NSMutableDictionary *) newPhotoAlbumWithName: (NSString *)name {
+    NSMutableDictionary *newPhotoAlbum = [NSMutableDictionary dictionary];
+    [newPhotoAlbum setObject:name forKey:kPhotoAlbumNameKey];
+    [newPhotoAlbum setObject:[NSDate date] forKey:kPhotoAlbumDateAddedKey];
+    NSMutableArray *photos = [NSMutableArray array];
+    for (int i = 0; i < 10; i++) {
+        [photos addObject:[NSDictionary dictionary]];
+    }
+    [newPhotoAlbum setObject:photos forKey:kPhotoAlbumPhotosKey];
+    return newPhotoAlbum;
+}
+
+-(void) savePhotoAlbum {
+    [self.photoAlbum writeToURL:[self photoAlbumPath] atomically:YES];
+}
+
+-(void) readSavedPhotoAlbums {
+    NSData *photoAlbumsData = [NSData dataWithContentsOfURL:[self photoAlbumPath]];
+    if (photoAlbumsData != nil) {
+        NSMutableArray *photoAlbums = [NSPropertyListSerialization propertyListWithData:photoAlbumsData options:NSPropertyListMutableContainers format:nil error:nil];
+        if (photoAlbums != nil) {
+            self.photoAlbum = photoAlbums;
+        }
+    }
+    else {
+        NSMutableArray *saveAlbum = [NSMutableArray array];
+        [saveAlbum addObject:[self newPhotoAlbumWithName:@"First Album"]];
+        self.photoAlbum = saveAlbum;
+        [self savePhotoAlbum];
+    }
+}
+
+-(void) photoAlbumSaveNeeded: (NSNotification *)notification {
+    [self savePhotoAlbum];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,9 +76,9 @@
     [self.photoAlbum addObject:@"Another Photo Album"];
 }
 
--(NSMutableOrderedSet *) photoAlbum {
+-(NSMutableArray *) photoAlbum {
     if (!_photoAlbum) {
-        _photoAlbum = [[NSMutableOrderedSet alloc] init];
+        _photoAlbum = [[NSMutableArray alloc] init];
     }
     return _photoAlbum;
 }

@@ -13,7 +13,7 @@
 @interface MasterViewController : UITableViewController
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
-@property (strong, nonatomic) NSMutableOrderedSet *photoAlbum;
+@property (strong, nonatomic) NSMutableArray *photoAlbum;
 
 
 @end
